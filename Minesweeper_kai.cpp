@@ -20,9 +20,13 @@ int main() {
 	for (int y = 0; y < FIELD_HEIGHT; y++) {
 		for (int x = 0; x < FIELD_WIDTH; x++) {
 			if ((x == CursolX) && (y == CursolY)) {
-				printf("⭕");
+				printf("Ｐ");
+			} else if (place_now[y][x].flag) {
+				printf("Ｆ");
+			} else if (place_now[y][x].mine) {
+				printf("Ｍ");
 			} else if (place_now[y][x].bomb) {
-				printf("⚫")
+				printf("Ｂ");
 			} else {
 				printf("・");
 			}
@@ -44,6 +48,12 @@ int main() {
 				break;
 		case 'b':
 				place_now[CursolY][CursolX].bomb = !(place_now[CursolY][CursolX].bomb);
+				break;
+		case 'm':
+				place_now[CursolY][CursolX].mine = !(place_now[CursolY][CursolX].mine);
+				break;
+		case 'm':
+				place_now[CursolY][CursolX].flag = !(place_now[CursolY][CursolX].flag);
 				break;
 	}
         
