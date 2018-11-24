@@ -1,0 +1,6 @@
+ローカル　Github フォルダに新規フォルダを作成
+ローカル　新規フォルダ内に新規ファイルを作成（拡張子をつける）
+Github(Web)に新規リポジトリを作成
+Quick setupQuick setupよりURLをコピー
+ローカル　ターミナルに入力　git remote add origin　https://コピーしたURL
+ローカル　ターミナルに入力　git push origin master
